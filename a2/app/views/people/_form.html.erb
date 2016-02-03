@@ -1,0 +1,38 @@
+<%= form_for @person do |f| %>
+    <% if @person.errors.any? %>
+        <div id="error_expl">
+            <h2>
+                <%= pluralize(@person.errors.count, "error") %> prevented this person from being saved:
+            </h2>
+            <ul>
+                <% @person.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :weight %><br>
+		<%= f.text_field :weight %>
+	</p>
+	<p>
+		<%= f.label :height %><br>
+		<%= f.text_field :height %>
+	</p>
+	<p>
+		<%= f.label :color %><br>
+		<%= f.text_field :color %>
+	</p>
+	<p>
+		<%= f.label :stylishness %><br>
+		<%= f.text_field :stylishness %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>

@@ -1,0 +1,27 @@
+<h2><%= @person.name %></h2>
+
+<div class="center-box">
+	<p>
+		<strong>Weight:</strong>
+		<%= @person.weight %>
+	</p>
+	<p>
+		<strong>Height:</strong>
+		<%= @person.height %>
+	</p>
+	<p>
+		<strong>Color:</strong>
+		<%= @person.color %>
+	</p>
+	<p>
+		<strong>Stylishness:</strong>
+		<%= @person.stylishness %>
+	</p>
+	<div class="btns">
+		<%= link_to 'Edit', edit_person_path(@person) %>
+		<%= link_to 'Remove', person_path(@person),
+			method: :delete,
+			data: { confirm: 'Are you sure you want to remove this person?' } %>
+		<%= link_to 'Back', people_path %>
+	</div>
+</div>

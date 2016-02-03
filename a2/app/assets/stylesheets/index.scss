@@ -1,3 +1,75 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$accent-color: #3fbc82;
+
+h1, h2 {
+    color: $accent-color;
+}
+
+.center-box {
+    height: 100%;
+}
+
+#wrap {
+    width: 400px;
+    height: 100%;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /*display: inline-block;*/
+}
+
+#disp-box {
+    position: absolute;
+    background: #F5F5DC;
+    padding: 1em;
+    width: 100%;
+    white-space: nowrap;
+}
+
+#disp-box div {
+    left: 0;
+    padding: auto;
+    margin: auto;
+}
+
+.red {
+    color: #FFF;
+    background: #F00;
+}
+
+.orange {
+    color: #000;
+    background: #FFA500;
+}
+
+.yellow {
+    color: #000;
+    background: #FF0;
+}
+
+.green {
+    color: #FFF;
+    background: #008000;
+}
+
+.blue {
+    color: #FFF;
+    background: #00F;
+}
+
+.purple {
+    color: #FFF;
+    background: #800080;
+}
+
+.black {
+    color: #FFF;
+    background: #000;
+}
+
+.white {
+    color: #000;
+    background: #FFF;
+}
