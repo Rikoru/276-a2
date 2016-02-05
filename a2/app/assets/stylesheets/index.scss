@@ -2,40 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $accent-color: #3fbc82;
+$sandbox-color: #EEE;
 
 h1, h2 {
     color: $accent-color;
 }
 
-.center-box {
-    height: 100%;
-}
-
 #wrap {
-    width: 400px;
+    /*max-width: 600px;*/
+    min-width: 200px;
     height: 100%;
     position: relative;
     overflow-x: scroll;
     overflow-y: hidden;
-    /*display: inline-block;*/
+    background: $sandbox-color;
 }
 
 #disp-box {
-    position: absolute;
-    background: #F5F5DC;
-    padding: 1em;
-    width: 100%;
+    background: $sandbox-color;
+    padding: 5em 2em 2em 2em;
     white-space: nowrap;
+    div {
+        border: 1px black solid;
+        vertical-align: bottom;
+        text-align: left;
+        display: inline-block;
+        left: 0;
+        margin-right: 1em;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    div:last-of-type {
+        margin-right: 3em;
+    }
 }
 
-#disp-box div {
-    left: 0;
-    padding: auto;
-    margin: auto;
+.stil {
+    font-size: 80%;
 }
 
 .red {
-    color: #FFF;
+    color: #000;
     background: #F00;
 }
 
@@ -55,8 +62,13 @@ h1, h2 {
 }
 
 .blue {
+    color: #000;
+    background: #00BFFF;
+}
+
+.indigo {
     color: #FFF;
-    background: #00F;
+    background: #4B0082;
 }
 
 .purple {

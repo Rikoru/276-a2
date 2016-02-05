@@ -1,27 +1,26 @@
 <h1><%= link_to 'RectangleDB', "/" %></h1>
 
 <div class="center-box">
+	<p>Click on a name to view that Rectangle's stats</p>
 	<table>
 		<tr>
-			<th>id</th>
+			<th></th>
 			<th>Name</th>
 			<th>Weight</th>
 			<th>Height</th>
 			<th>Color</th>
 			<th>Stylishness</th>
-			<th colspan="2"></th>
 		</tr>
-
+		<% count = 0 %>
 		<% @person.each do |person| %>
 			<tr>
-				<td><%= person.id %></td>
-				<td><%= person.name %></td>
+				<% count = count + 1 %>
+				<td><%=count%></td>
+				<td><%=link_to person.name, person_path(person)%></td>
 				<td><%= person.weight %></td>
 				<td><%= person.height %></td>
 				<td><%= person.color %></td>
 				<td><%= person.stylishness %></td>
-				<td><%= link_to 'Show', person_path(person) %></td>
-				<td><%= link_to 'Edit', edit_person_path(person) %></td>
 			</tr>
 		<% end %>
 	</table>

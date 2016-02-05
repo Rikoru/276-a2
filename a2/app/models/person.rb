@@ -5,11 +5,11 @@ class Person < ActiveRecord::Base
 		numericality: { only_integer: true },
 		length: { maximum: 3 }
 	validates :color, inclusion: {
-		in: %w(red orange yellow green blue purple black white),
-		message: "can only red/orange/yellow/green/blue/purple/black/white"
+		in: %w(red orange yellow green blue indigo purple black white),
+		message: "can only be one of red, orange, yellow, green, blue, indigo, purple, black, or white"
 	}
 	validates :stylishness, inclusion: {
 		in: %w(none some very),
-		message: "can only be none, some, or very"
+		message: "can only be one of none, some, or very"
 	}
 end

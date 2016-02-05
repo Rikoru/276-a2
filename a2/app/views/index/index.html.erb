@@ -1,12 +1,31 @@
-<h1>276 Assignment 2</h1>
+<h1>RectangleDanceParty</h1>
 <div class="center-box">
+    <p>A rectangle with stylishness set to <em>none</em>
+        will move very quickly and ungracefully.
+        A rectangle with stylishness set to <em>some</em>
+        will move slightly less quickly.
+        A rectangle with stylishness set to <em>very</em>
+        will move slowly and gracefully.</p>
+    <p><strong>Hover over a rectangle to let it know
+        it's being watched. Nobody likes dancing while being
+        watched.</strong></p>
     <div id="wrap">
         <div id="disp-box">
             <% @person.find_each do |pe| %>
-                <div class="<%= pe.color %>" style="float:left,width:<%= pe.weight %>px,height:<%= pe.height %>px"><%= pe.name %></div>
+                <% wght = (pe.weight.to_i - (pe.name.length + 15))/5 %>
+                <% hght = (pe.height.to_i * 1.4) %>
+                <% if wght < 5 %>
+                    <% wght = 5 %>
+                <% end %>
+                <% if hght < 5 %>
+                    <% hght = 5 %>
+                <% end %>
+                <div class="<%=pe.color%> <%=pe.stylishness%>" style="padding-right:<%=wght%>px;padding-bottom:<%=hght%>px"><%=pe.name%><br><span class="stil">(<%=pe.stylishness%>)</span></div>
             <% end %>
         </div>
     </div>
+    <p class="stil">If the rectangles refuse to dance, you may need to
+        refresh the page. 🐵</p>
     <div class="btns">
         <%= link_to 'People', controller: 'people' %>
     </div>

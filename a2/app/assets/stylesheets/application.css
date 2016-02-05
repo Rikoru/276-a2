@@ -23,8 +23,17 @@ body {
 }
 
 h1 {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    color: #283d34;
     font-variant: small-caps;
     font-size: 2.5em;
+    background: #889d93;
+    top: 0;
+    margin-top: 0;
+    padding-bottom: 0.3em;
+    box-shadow: 0px 5px 6px 2px rgba(0,0,0,0.36);
 }
 
 h1 a {
@@ -32,11 +41,15 @@ h1 a {
 }
 
 .center-box {
+    margin-top: 3em;
     left: auto;
     right: auto;
     display: inline-block;
     background: #a8bdb3;
     padding: 1em;
+    box-shadow: 0px 5px 6px 2px rgba(0,0,0,0.24);
+    max-width: 90%;
+    border-radius: 10px;
 }
 
 .center-box a {
@@ -69,13 +82,13 @@ td {
 }
 
 .btns {
-    margin: 1em;
+    margin-top: 1em;
 }
 
 .btns a {
     border: 1px solid black;
     float: right;
-    margin-left: .5em;
+    /*margin-left: .5em;*/
     padding: .5em;
     background: #e2e9e6;
     font-weight: 600;
